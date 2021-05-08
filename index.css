@@ -1,0 +1,27 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    font-family: Avenir, sans-serif;
+}
+
+h1, nav {
+    text-align: center;
+}
+
+nav ul {
+    list-style-type: none;
+    display: flex;
+}
+
+nav ul li {
+    flex: 1 1 auto;
+    text-align: center;
+    position: relative;
+}
+
+footer
+{
+    position: absolute;
+    bottom: 0px;
+    width: 100%;
+}
