@@ -1,10 +1,27 @@
-#answer
+*
+{
+    font-family: Avenir, sans-serif;
+}
+
+form, p
 {
     text-align: center;
-    margin-top: 300px;
 }
 
 textarea
 {
     border: solid 2px gray;
+}
+
+footer
+{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
+nav ul li {
+    flex: 1 1 auto;
+    text-align: center;
+    position: relative;
 }
