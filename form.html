@@ -12,13 +12,13 @@
         <h1>Game Suggestions</h1>
         <form id="game-suggestions-form">
             <div class="parent">
-                <label for="title"></label><input type="text" id="title" name="game-title" placeholder="Game Title">
-                <label for="description"></label><input type="text" id="description" name="game-description" placeholder="Game Description">
-                <label for="interest"></label><input type="text" id="interest" name="game-interest" placeholder="Game Interest">
+                <label for="title"></label><input type="text" id="title" name="game-title" placeholder="Game Title" autocomplete="off">
+                <label for="description"></label><input type="text" id="description" name="game-description" placeholder="Game Description" autocomplete="off">
+                <label for="interest"></label><input type="text" id="interest" name="game-interest" placeholder="Game Interest" autocomplete="off">
             </div>
             <div class="parent">
                 <div>
-                    <button type="button" id="add">Add</button>
+                    <button type="button" id="add">Add<span id="counter"></span></button>
                 </div>
             </div>
         </form>
@@ -37,5 +37,6 @@
             </tbody>
         </table>
     </main>
+    <script src="form.js"></script>
 </body>
 </html>
