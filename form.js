@@ -1,6 +1,3 @@
-const add = document.getElementById("add")
-
-
 function addGameSuggestion() {
     const title = document.getElementById("title").value
     const description = document.getElementById("description").value
@@ -36,4 +33,11 @@ function addGameSuggestion() {
 }
 
 
-add.onclick = addGameSuggestion
+function main() {
+    const add = document.getElementById("add")
+    add.onclick = addGameSuggestion
+}
+
+
+main()
+
