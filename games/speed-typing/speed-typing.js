@@ -1,9 +1,4 @@
-const chosen_text = document.getElementById('chosen-text')
-const submit_button = document.getElementById('submit-button')
-let start = Date.now()
-
-
-function is_typed_text_correct() {
+function is_typed_text_correct(chosen_text, start) {
     let typed_text = document.getElementById('typed-text').value
     const answer_time = Date.now() - start
     if (typed_text === chosen_text.textContent) {
@@ -19,7 +14,7 @@ function get_random_int(max) {
 }
 
 
-function get_chosen_text() {
+function get_chosen_text(chosen_text) {
     fetch('https://jsonplaceholder.typicode.com/todos')
     .then(response => response.json())
     .then(function (data) {
@@ -29,6 +24,14 @@ function get_chosen_text() {
 }
 
 
-document.getElementById('typed-text').value = ''
-get_chosen_text()
-submit_button.onclick = is_typed_text_correct
+function main() {
+    const chosen_text = document.getElementById('chosen-text')
+    const submit_button = document.getElementById('submit-button')
+    let start = Date.now()
+    document.getElementById('typed-text').value = ''
+    get_chosen_text(chosen_text)
+    submit_button.onclick = function() {is_typed_text_correct(chosen_text, start)}
+}
+
+
+main()
