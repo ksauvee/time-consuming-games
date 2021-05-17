@@ -1,67 +1,62 @@
-*
-{
+/* Styles généraux */
+
+*{
     margin: 0;
     padding: 0;
     font-family: Avenir, sans-serif;
 }
 
-
-body
-{
-    background-color: #F5F5F5;
+body{
+    background-color: #f0f0f0;
 }
 
 
-nav ul {
-    list-style-type: none;
-    display: flex;
-}
+/* Style titre + présentation */
 
-
-nav ul li {
-    flex: 1 1 auto;
-    text-align: center;
-    position: relative;
-}
-
-
-footer
-{
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-}
-
-
-#presentation
-{
+#presentation{
     font-size: 20px;
     padding-top: 50px;
     padding-bottom: 40px;
     text-align: center;
-    width: 400px;
+    max-width: 400px;
     margin: 0 auto;
 }
 
-
-#buttons
-{
-    display: flex;
-    flex-direction: row;
+h1{
+    margin-top: 100px;
+    font-size: 40px;
+    text-align: center;
 }
 
 
-.game
-{
+/* Style appliqué aux boutons de jeu + au footer */
+
+nav{
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    min-width: 465px;
+    flex-flow: row wrap;
 }
 
 
-.game-button
-{
+/*Style appliqué au contenu du footer */
+
+footer{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+footer nav{
+    justify-content: space-around;
+}
+
+
+/* Style sur les boutons de jeu */
+
+.game{
+    flex: 1 1;
+    text-align: center;
+}
+
+.game-button{
     border-radius: 50%;
     width: 200px;
     background: linear-gradient(to bottom right,  rgba(59,255,206,1) , rgba(137,125,242,1));
@@ -74,32 +69,18 @@ footer
     transition: 0.6s;
 }
 
-
-.game-button:hover
-{
+.game-button:hover{
     opacity: 0.7;
 }
 
-
-.game-presentation
-{
+.game-presentation{
     opacity: 0;
     transition: visibility 0s, opacity 0.5s linear;
     visibility: hidden;
     font-size: 20px;
 }
 
-
-.game-button:hover + .game-presentation
-{
+.game-button:hover + .game-presentation{
     visibility: initial;
     opacity: 1;
-}
-
-
-h1
-{
-    margin-top: 100px;
-    font-size: 40px;
-    text-align: center;
 }
