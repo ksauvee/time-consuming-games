@@ -111,3 +111,7 @@ main
     box-shadow: 2px 2px 3px rgb(100, 100, 100);
     margin-bottom: 30px;
 }
+
+.parent{
+    text-align: center;
+}
