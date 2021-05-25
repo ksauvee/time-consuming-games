@@ -36,5 +36,6 @@ function changePosition(){
 
 function messageFin(){
     resultats.innerHTML = "You got : " + points + " points"
-    resultats.style.backgroundColor = "#00000049"
+    resultats.style.backgroundColor = "#425664"
+    resultats.style.color = "white"
 }
