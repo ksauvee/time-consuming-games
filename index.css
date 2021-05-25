@@ -1,23 +1,18 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@1,600&display=swap');
-
 /* Styles généraux */
 
 *{
     margin: 0;
     padding: 0;
-    font-family: 'Montserrat', sans-serif;
-}
-
-body{
-    background-color: azure;
+    font-family: Verdana, sans-serif;
 }
 
 
 /* Style titre + présentation */
 
 header{
+    background-color: #f6f4f2;
+    color: #006e81;
     padding-top: 2%;
-    background: #c0dbff;
 }
 
 #presentation{
@@ -37,45 +32,88 @@ h1{
 
 /* Style appliqué aux boutons de jeu + au footer */
 
-nav{
+.games{
+    background-color: #f6f4f2;
+    height: 600px;
     display: flex;
-    flex-flow: row wrap;
+    flex-wrap: nowrap;
+    overflow: auto;
 }
 
 
 /* Style sur les boutons de jeu */
 
 .game{
-    flex: 1 1;
-    text-align: center;
-}
-
-.game-button{
-    border-radius: 50%;
-    width: 200px;
-    background: linear-gradient(to bottom right,  rgba(59,255,206,1) , rgba(137,125,242,1));
-    border: none;
-    padding: 9%;
-    margin: 5%;
+    background-color: #425664;
     color: white;
-    font-size: 1.5em;
-    opacity: 1;
+    flex: 0 0 auto;
+    width: 400px;
+    height: 500px;
+    margin: 20px;
     transition: 0.6s;
 }
 
-.game-button:hover{
-    opacity: 0.7;
+
+.game:hover{
+    transform:scale(1.1, 1.1)
 }
+
+
+.game-title{
+    font-size: 40px;
+    margin: 100px 20px 20px;
+}
+
 
 .game-presentation{
-    opacity: 0;
-    transition: visibility 0s, opacity 0.5s linear;
-    visibility: hidden;
-    font-size: 1em;
+    font-size: 20px;
+    margin: 10px 20px 20px;
 }
 
-.game-button:hover + .game-presentation{
-    visibility: initial;
+
+.game-button-parent{
+    text-align: center;
+}
+
+
+.game-button{
+    margin: 50px;
+    font-size: 24px;
+    padding: 16px 30px;
+    text-decoration: none;
+    color: #006e81;
+    background-color: #f6f4f2;
+    transition: all 0.6s;
+    cursor: pointer;
+    opacity: 0.8;
+}
+
+
+.game-button span{
+    display: inline-block;
+    position: relative;
+    transition: 0.6s;
+}
+
+.game-button:hover span{
+    padding-right: 20px;
+}
+
+
+.game-button span:after{
+    content: '\00bb';
+    position: absolute;
+    opacity: 0;
+}
+
+
+.game-button:hover span:after{
+    opacity: 1;
+    right: 0;
+}
+
+
+.game-button:hover{
     opacity: 1;
 }
 
@@ -83,7 +121,7 @@ nav{
 /* Style du footer */
 
 footer{
-    background: #c0dbff;
+    background-color: #f6f4f2;
     width: 100%;
     position: absolute;
     bottom: 0;
@@ -103,7 +141,7 @@ a{
 }
 
 a:link {
-    color: #004585;
+    color: #006e81;
 }
 
 a:visited {
