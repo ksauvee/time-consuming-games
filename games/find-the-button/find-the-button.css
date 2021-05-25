@@ -8,9 +8,27 @@
 /* Style de la zone textuelle du haut */
 
 header{
-    padding-top: 0.8%;
-    padding-bottom: 1.6%;
     background-color: #f6f4f2;
+    color: #006e81;
+    padding: 50px;
+}
+
+header div{
+    max-width: 800px;
+    background-color: white;
+    box-shadow: 0 10px 20px 0 rgba(0,0,0,.05);
+    padding: 5px;
+    margin: 0 auto 5px;
+}
+
+header div h1, header div p{
+    color: #006e81;
+    background-color: white;
+}
+
+h1{
+    font-size: 40px;
+    text-align: center;
     color: #006e81;
 }
 
@@ -52,38 +70,6 @@ main{
 #CLICK:hover{
     border: 2px solid #89b6f0;
     background-color: #6585af;
-}
-
-
-/* Style du footer */
-
-footer{
-    background-color: #f6f4f2;
-    color: #006e81;
-    width: 100%;
-    position: absolute;
-    bottom: 0;
-}
-
-footer nav{
-    padding: 1.2%;
-    justify-content: space-around;
-    display: flex;
-    flex-flow: row wrap;
-}
-
-a{
-    outline: none;
-    text-decoration: none;
-    padding: 2px 1px 0;
-}
-
-a:link {
-    color: #004585;
-}
-
-a:visited {
-    color: #006e81;
 }
 
 /* Style du footer */
