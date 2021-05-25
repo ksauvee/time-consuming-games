@@ -17,6 +17,45 @@ h1{
     text-align: center;
 }
 
+img{
+    max-height: 250px;
+    max-width: 250px;
+}
+
+main{
+    margin-top: 50px;
+    position: relative;
+}
+
+main .member-1-picture, main .member-1-presentation{
+    display: inline-block;
+}
+
+main .member-1-picture{
+    float: left;
+}
+
+main .member-1-presentation{
+    margin-left: 130px;
+    max-width: 900px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    color: #006e81;
+}
+
+main .member-1{
+    padding: 10px;
+    max-width: 1000px;
+    min-height: 250px;
+    margin: 0 auto;
+    background-color: white;
+    box-shadow: 0 10px 20px 0 rgba(0,0,0,.05);
+    vertical-align: center;
+}
+
 /* Style du footer */
 
 footer{
