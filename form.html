@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="form.css">
+    <title>Game Suggestions</title>
+</head>
+<body>
+    <header>
+        <h1>Game Suggestions</h1>
+        <form id="game-suggestions-form">
+            <div class="parent">
+                <label for="title"></label><input type="text" id="title" name="game-title" placeholder="Game Title" autocomplete="off">
+                <label for="description"></label><input type="text" id="description" name="game-description" placeholder="Game Description" autocomplete="off">
+                <label for="interest"></label><input type="text" id="interest" name="game-interest" placeholder="Game Interest" autocomplete="off">
+            </div>
+            <div class="parent">
+                <div>
+                    <button type="button" id="add">Add<span id="counter"></span></button>
+                </div>
+            </div>
+        </form>
+    </header>
+    <main>
+        <table id="game-suggestions">
+            <thead>
+                <tr>
+                    <th>Title</th>
+                    <th>Description</th>
+                    <th>Interest</th>
+                    <th>Status</th>
+                </tr>
+            </thead>
+            <tbody id="game-suggestions-list">
+            </tbody>
+        </table>
+    </main>
+    <script src="form.js"></script>
+</body>
+</html>
