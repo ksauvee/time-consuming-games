@@ -6,6 +6,10 @@
     font-family: Verdana, sans-serif;
 }
 
+body{
+    padding-bottom: 20px;
+}
+
 
 /* Style titre + présentation */
 
@@ -124,6 +128,7 @@ footer{
     background-color: #f6f4f2;
     width: 100%;
     bottom: 0;
+    position: fixed;
 }
 
 footer nav{

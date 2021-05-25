@@ -85,3 +85,33 @@ a:link {
 a:visited {
     color: #006e81;
 }
+
+/* Style du footer */
+
+footer{
+    background-color: #f6f4f2;
+    width: 100%;
+    bottom: 0;
+    position: fixed;
+}
+
+footer nav{
+    padding: 1.2%;
+    justify-content: space-around;
+    display: flex;
+    flex-flow: row wrap;
+}
+
+a{
+    outline: none;
+    text-decoration: none;
+    padding: 2px 1px 0;
+}
+
+a:link {
+    color: #006e81;
+}
+
+a:visited {
+    color: #006e81;
+}
