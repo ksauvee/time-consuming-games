@@ -37,6 +37,7 @@ h1{
 /* Style appliqué aux boutons de jeu + au footer */
 
 .games{
+    padding-top: 5px;
     background-color: #f6f4f2;
     height: 600px;
     display: flex;
