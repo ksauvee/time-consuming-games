@@ -1,10 +1,9 @@
-function is_typed_text_correct(chosen_text, start) {
+function is_typed_text_correct(chosen_text, start, results) {
     let typed_text = document.getElementById('typed-text').value
     const answer_time = Date.now() - start
     if (typed_text === chosen_text.textContent) {
-        alert(Math.floor(answer_time / 1000) + ' seconds')
-        window.location.reload()
-        start = Date.now()
+        ending_message(results, answer_time)
+        return Date.now()
     }
 }
 
@@ -24,13 +23,21 @@ function get_chosen_text(chosen_text) {
 }
 
 
+function ending_message(results, answer_time) {
+    results.innerHTML = "You type the text in " + Math.floor(answer_time / 1000) + " seconds !"
+    results.style.backgroundColor = "#425664"
+    results.style.color = "white"
+}
+
+
 function main() {
     const chosen_text = document.getElementById('chosen-text')
     const submit_button = document.getElementById('submit-button')
+    const results = document.getElementById('results')
     let start = Date.now()
     document.getElementById('typed-text').value = ''
     get_chosen_text(chosen_text)
-    submit_button.onclick = function() {is_typed_text_correct(chosen_text, start)}
+    submit_button.onclick = function() {start = is_typed_text_correct(chosen_text, start, results)}
 }
 
 
