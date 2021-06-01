@@ -24,6 +24,9 @@ function get_chosen_text(chosen_text) {
 
 
 function ending_message(results, answer_time, retry, retry_same_text, start) {
+    document.getElementsByTagName("header")[0].style.opacity = "0.2"
+    document.getElementsByTagName("form")[0].style.opacity = "0.2"
+    document.getElementById("submit-description").style.opacity = "0.2"
     results.innerHTML = "You type the text in " + Math.floor(answer_time / 1000) + " seconds !"
     results.style.backgroundColor = "#425664"
     results.style.color = "white"
