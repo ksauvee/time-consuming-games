@@ -30,7 +30,7 @@ function addpoint(){
 }
 
 function changePosition(){
-    button.style.top = get_random_int(95)+'%';
+    button.style.top = get_random_int(90)+'%';
     button.style.left = get_random_int(95)+'%';
 }
 
@@ -38,4 +38,5 @@ function messageFin(){
     resultats.innerHTML = "You got : " + points + " points"
     resultats.style.backgroundColor = "#425664"
     resultats.style.color = "white"
+    document.getElementsByTagName("header")[0].style.opacity = "0.2"
 }
