@@ -77,9 +77,13 @@ function main() {
 
     document.addEventListener("keydown", (e) => {
         if (e.key === 'z') {
-            player.y += 15
+            if (player.y < board.height - 30) {
+                player.y += 15
+            }
         } else if (e.key === 's') {
-            player.y -= 15
+            if (player.y > 0) {
+                player.y -= 15
+            }
         }
     })
 
