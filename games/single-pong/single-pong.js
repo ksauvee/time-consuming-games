@@ -12,6 +12,7 @@ function Ball() {
     this.x = 50
     this.y = 50
     this.velX = 2
+    this.velY = 2
 
     this.draw = function (board, player, ctx) {
         this.move(board, player)
@@ -24,8 +25,11 @@ function Ball() {
             this.velX = -this.velX
         } else if (this.x - 5 <= player.x && this.y >= player.y && this.y <= player.y + 20) {
             this.velX = -this.velX
+        } else if (this.y + 5 >= board.height || this.y - 5 <= 0) {
+            this.velY = -this.velY
         }
         this.x += this.velX
+        this.y += this.velY
     }
 }
 
