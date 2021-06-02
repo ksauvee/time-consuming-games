@@ -13,6 +13,7 @@ function Ball() {
     this.y = 50
     this.velX = 2
     this.velY = 2
+    this.points = 0
 
     this.draw = function (board, player, ctx) {
         this.move(board, player)
@@ -21,12 +22,22 @@ function Ball() {
     }
 
     this.move = function(board, player) {
-        if (this.x + 3 >= board.width) {
+        if (this.x + 5 >= board.width) {
             this.velX = -this.velX
         } else if (this.x - 5 <= player.x && this.y >= player.y && this.y <= player.y + 20) {
             this.velX = -this.velX
+            this.points += 1
         } else if (this.y + 5 >= board.height || this.y - 5 <= 0) {
             this.velY = -this.velY
+        } else if (this.x <= 0) {
+            this.velX = 0
+            this.velY = 0
+            this.x = -5
+            this.y = -5
+            clearInterval()
+            const results = document.getElementById('results')
+            const retry = document.getElementById('retry')
+            endingMessage(results, retry, this.points)
         }
         this.x += this.velX
         this.y += this.velY
@@ -44,6 +55,21 @@ function draw(player, ball, board) {
 }
 
 
+function endingMessage(results, retry, points) {
+    document.getElementsByTagName("header")[0].style.opacity = "0.2"
+    document.getElementsByTagName("canvas")[0].style.opacity = "0.2"
+    results.innerHTML = "You got " + points + " points !"
+    results.style.backgroundColor = "#425664"
+    results.style.color = "white"
+    results.style.display = "block"
+    retry.innerHTML = "Retry"
+    retry.style.backgroundColor = "#425664"
+    retry.style.color = "white"
+    retry.style.display = "block"
+    retry.onclick = function() {window.location.reload()}
+}
+
+
 function main() {
     const board = document.getElementById("board")
     const player = new Paddle()
@@ -51,9 +77,9 @@ function main() {
 
     document.addEventListener("keydown", (e) => {
         if (e.key === 'z') {
-            player.y += 8
+            player.y += 15
         } else if (e.key === 's') {
-            player.y -= 8
+            player.y -= 15
         }
     })
 

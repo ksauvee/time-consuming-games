@@ -47,3 +47,25 @@ a:link {
 a:visited {
     color: #006e81;
 }
+
+
+#results {
+    font-size: 3em;
+    position: fixed;
+    left: 50%;
+    top: 30%;
+    padding: 2vh 2vw 2vh 2vw;
+    transform: translate(-50%, -50%);
+}
+
+#retry {
+    display: none;
+    position: fixed;
+    left: 50%;
+    top: 40%;
+    transform: translate(-50%, -50%);
+    cursor: pointer;
+    font-size: 24px;
+    padding: 16px 30px;
+    text-decoration: none;
+}
