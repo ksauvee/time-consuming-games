@@ -11,10 +11,21 @@ function Paddle() {
 function Ball() {
     this.x = 50
     this.y = 50
+    this.velX = 2
 
-    this.draw = function(board, ctx) {
+    this.draw = function (board, player, ctx) {
+        this.move(board, player)
         ctx.arc(this.x, this.y, 3, 0, 2 * Math.PI)
         ctx.fill()
+    }
+
+    this.move = function(board, player) {
+        if (this.x + 3 >= board.width) {
+            this.velX = -this.velX
+        } else if (this.x - 5 <= player.x && this.y >= player.y && this.y <= player.y + 20) {
+            this.velX = -this.velX
+        }
+        this.x += this.velX
     }
 }
 
@@ -25,7 +36,7 @@ function draw(player, ball, board) {
     ctx.beginPath()
     ctx.clearRect(0, 0, board.width, board.height)
     player.draw(board, ctx)
-    ball.draw(board, ctx)
+    ball.draw(board, player, ctx)
 }
 
 
@@ -44,7 +55,7 @@ function main() {
 
     setInterval(function () {
         draw(player, ball, board)
-    }, 0.001)
+    }, 1000/60)
 }
 
 
