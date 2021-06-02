@@ -3,7 +3,7 @@ function Paddle() {
     this.y = 30
 
     this.draw = function(board, ctx) {
-        ctx.fillRect(this.x, this.y, 3, 20)
+        ctx.fillRect(this.x, this.y, 3, 30)
     }
 }
 
@@ -24,7 +24,7 @@ function Ball() {
     this.move = function(board, player) {
         if (this.x + 5 >= board.width) {
             this.velX = -this.velX
-        } else if (this.x - 5 <= player.x && this.y >= player.y && this.y <= player.y + 20) {
+        } else if (this.x - 5 <= player.x && this.y >= player.y && this.y <= player.y + 30) {
             this.velX = -this.velX
             this.points += 1
         } else if (this.y + 5 >= board.height || this.y - 5 <= 0) {

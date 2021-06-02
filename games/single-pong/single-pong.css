@@ -10,8 +10,38 @@ body {
 }
 
 
+header{
+    padding: 50px;
+}
+
+header div{
+    max-width: 500px;
+    margin: 0 auto 5px;
+    background-color: white;
+    box-shadow: 0 10px 20px 0 rgba(0,0,0,.05);
+    padding: 5px;
+}
+
+header h1, header p{
+    color: #006e81;
+}
+
+
+h1
+{
+    font-size: 40px;
+    text-align: center;
+    color: #006e81;
+}
+
+
+p {
+    text-align: center;
+}
+
+
 #board {
-    height: 90vh;
+    height: 500px;
     width: 100vw;
 }
 
