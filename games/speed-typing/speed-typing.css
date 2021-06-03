@@ -39,26 +39,6 @@ textarea {
 }
 
 
-#submit-button-parent {
-    margin-top: 20px;
-}
-
-
-#submit-button {
-    background-color: rgb(247, 247, 247);
-    box-shadow: 1px 1px 2px rgb(100, 100, 100);
-    border: none;
-    border-radius: 5%;
-    padding: 5px;
-    text-transform: uppercase;
-}
-
-
-#submit-button:hover {
-    background-color: rgb(158, 158, 158);
-}
-
-
 footer {
     width: 100%;
     bottom: 0;
@@ -78,6 +58,11 @@ a {
     outline: none;
     text-decoration: none;
     padding: 2px 1px 0;
+}
+
+
+a:link, a:visited {
+    color: #006e81;
 }
 
 

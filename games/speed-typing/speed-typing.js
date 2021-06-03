@@ -58,14 +58,18 @@ function launchRetry(results, retry, retry_same_text) {
 
 function main() {
     const chosen_text = document.getElementById('chosen-text')
-    const submit_button = document.getElementById('submit-button')
     const results = document.getElementById('results')
     const retry = document.getElementById('retry')
     const retry_same_text = document.getElementById('retry-same-text')
     let start = Date.now()
     document.getElementById('typed-text').value = ''
     getChosenText(chosen_text)
-    submit_button.onclick = function() {start = isTypedTextCorrect(chosen_text, start, results, retry, retry_same_text)}
+
+    document.addEventListener("keydown", (e) => {
+        if (e.key === 'Enter') {
+            start = isTypedTextCorrect(chosen_text, start, results, retry, retry_same_text)
+        }
+    })
 }
 
 
