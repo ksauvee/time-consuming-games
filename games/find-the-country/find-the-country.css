@@ -1,0 +1,93 @@
+*
+{
+    margin: 0;
+    padding: 0;
+    font-family: Verdana, sans-serif;
+}
+
+
+body{
+    background-color: #f6f4f2;
+}
+
+header{
+    padding: 50px;
+}
+
+header div{
+    max-width: 500px;
+    margin: 0 auto 5px;
+    background-color: white;
+    box-shadow: 0 10px 20px 0 rgba(0,0,0,.05);
+    padding: 5px;
+}
+
+header h1, header p{
+    color: #006e81;
+}
+
+
+h1
+{
+    font-size: 40px;
+    text-align: center;
+    color: #006e81;
+}
+
+p, main{
+    text-align: center;
+    color: #006e81;
+    font-size: 20px;
+}
+
+main, main div{
+    margin: 50px;
+}
+
+button
+{
+    background-color: rgb(247, 247, 247);
+    box-shadow: 1px 1px 2px rgb(100, 100, 100);
+    border: none;
+    border-radius: 5%;
+    padding: 5px;
+    text-transform: uppercase;
+}
+
+
+button:hover
+{
+    background-color: rgb(158, 158, 158);
+}
+
+main div p{
+    margin-top: 50px;
+}
+
+footer{
+    background-color: #f6f4f2;
+    width: 100%;
+    bottom: 0;
+    position: fixed;
+}
+
+footer nav{
+    padding: 1.2%;
+    justify-content: space-around;
+    display: flex;
+    flex-flow: row wrap;
+}
+
+a{
+    outline: none;
+    text-decoration: none;
+    padding: 2px 1px 0;
+}
+
+a:link {
+    color: #006e81;
+}
+
+a:visited {
+    color: #006e81;
+}
