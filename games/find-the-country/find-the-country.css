@@ -6,15 +6,15 @@
 }
 
 
-body{
+body {
     background-color: #f6f4f2;
+    padding-top: 20px;
+    color: #006e81;
+    text-align: center;
 }
 
-header{
-    padding: 50px;
-}
 
-header div{
+header {
     max-width: 500px;
     margin: 0 auto 5px;
     background-color: white;
@@ -22,30 +22,34 @@ header div{
     padding: 5px;
 }
 
-header h1, header p{
-    color: #006e81;
-}
 
-
-h1
-{
+h1 {
     font-size: 40px;
-    text-align: center;
-    color: #006e81;
 }
 
-p, main{
-    text-align: center;
-    color: #006e81;
+
+p {
     font-size: 20px;
 }
 
-main, main div{
+
+#score {
+    margin-top: 40px;
+    margin-bottom: 100px;
+}
+
+
+#proposal {
     margin: 50px;
 }
 
-button
-{
+
+#submit-parent {
+    margin: 20px;
+}
+
+
+#submit {
     background-color: rgb(247, 247, 247);
     box-shadow: 1px 1px 2px rgb(100, 100, 100);
     border: none;
@@ -55,34 +59,32 @@ button
 }
 
 
-button:hover
-{
+#submit:hover {
     background-color: rgb(158, 158, 158);
 }
 
-main div p{
-    margin-top: 50px;
-}
 
-footer{
-    background-color: #f6f4f2;
+footer {
     width: 100%;
     bottom: 0;
     position: fixed;
 }
 
-footer nav{
+
+footer nav {
     padding: 1.2%;
     justify-content: space-around;
     display: flex;
     flex-flow: row wrap;
 }
 
-a{
+
+a {
     outline: none;
     text-decoration: none;
     padding: 2px 1px 0;
 }
+
 
 a:link {
     color: #006e81;
@@ -92,7 +94,8 @@ a:visited {
     color: #006e81;
 }
 
-#results{
+
+#results {
     font-size: 3em;
     position: fixed;
     left: 50%;
@@ -101,11 +104,12 @@ a:visited {
     transform: translate(-50%, -50%);
 }
 
-#retry{
+
+#retry {
     display: none;
     position: fixed;
     left: 50%;
-    top: 60%;
+    top: 45%;
     transform: translate(-50%, -50%);
     cursor: pointer;
     font-size: 24px;
