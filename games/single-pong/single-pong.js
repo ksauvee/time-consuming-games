@@ -78,8 +78,10 @@ function stylizeEndingMessage(element) {
 
 
 function endingMessage(results, retry, points) {
+    document.getElementById("counter").style.opacity = "0.2"
     document.getElementsByTagName("header")[0].style.opacity = "0.2"
     document.getElementsByTagName("canvas")[0].style.opacity = "0.2"
+
     results.innerHTML = "You got " + points + " points !"
     stylizeEndingMessage(results)
     retry.innerHTML = "Retry"

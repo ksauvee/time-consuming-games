@@ -1,4 +1,5 @@
-* {
+*
+{
     margin: 0;
     padding: 0;
     font-family: Verdana, sans-serif;
@@ -7,18 +8,18 @@
 
 body {
     background-color: #f6f4f2;
-    color: #006e81;
     padding-top: 20px;
+    color: #006e81;
     text-align: center;
 }
 
 
 header {
-    padding: 5px;
     max-width: 500px;
-    margin: 0 auto;
+    margin: 0 auto 5px;
     background-color: white;
     box-shadow: 0 10px 20px rgba(128,128,128,.3);
+    padding: 5px;
 }
 
 
@@ -27,20 +28,23 @@ h1 {
 }
 
 
-main > * {
-    margin-top: 50px;
-    color: #006e81;
+p {
     font-size: 20px;
 }
 
 
-textarea {
-    border: solid 2px gray;
+#score {
+    margin-top: 40px;
+    margin-bottom: 100px;
+}
+
+
+#proposal {
+    margin: 50px;
 }
 
 
 footer {
-    background-color: #f6f4f2;
     width: 100%;
     bottom: 0;
     position: fixed;
@@ -62,7 +66,11 @@ a {
 }
 
 
-a:link, a:visited {
+a:link {
+    color: #006e81;
+}
+
+a:visited {
     color: #006e81;
 }
 
@@ -77,36 +85,14 @@ a:link, a:visited {
 }
 
 
-#retry, #retry-same-text {
+#retry {
     display: none;
     position: fixed;
     left: 50%;
+    top: 45%;
     transform: translate(-50%, -50%);
     cursor: pointer;
     font-size: 24px;
     padding: 16px 30px;
     text-decoration: none;
-}
-
-
-#retry {
-    top: 50%;
-}
-
-
-#retry-same-text {
-    top: 60%;
-}
-
-#typed-text {
-    width: 300px;
-    height: 100px;
-    max-width: 600px;
-    min-width: 30px;
-    max-height: 200px;
-    min-height: 20px;
-}
-
-#submit-description {
-    margin-bottom: 50px;
 }

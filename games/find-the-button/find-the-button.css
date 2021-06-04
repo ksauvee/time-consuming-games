@@ -67,7 +67,8 @@ p {
 
 main{
     position: relative;
-    height:82vh;
+    height:50vh;
+    margin-bottom: 50px;
 }
 
 #CLICK {
