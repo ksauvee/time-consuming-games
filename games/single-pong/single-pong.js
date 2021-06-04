@@ -22,14 +22,14 @@ function Ball() {
     this.velX = 2
     this.velY = 0.5
 
-    this.draw = function (board, player, ctx, points) {
-        points = this.move(board, player, points)
+    this.draw = function (board, player, ctx, counter, points) {
+        points = this.move(board, player, counter, points)
         ctx.arc(this.x, this.y, 3, 0, 2 * Math.PI)
         ctx.fill()
         return points
     }
 
-    this.move = function(board, player, points) {
+    this.move = function(board, player, counter, points) {
         if (this.x + 5 >= board.width) {
             // case hit right wall
             this.velX = -this.velX
@@ -37,6 +37,7 @@ function Ball() {
             // case hit paddle
             this.velX = -this.velX
             points += 1
+            counter.innerHTML = 'Points : ' + points
         } else if (this.y + 5 >= board.height || this.y - 5 <= 0) {
             // case hit horizontal walls
             this.velY = -this.velY
@@ -58,13 +59,13 @@ function Ball() {
 }
 
 
-function draw(player, ball, board, points) {
+function draw(player, ball, board, counter, points) {
     const ctx = board.getContext("2d")
     ctx.fillStyle = "#006e81"
     ctx.beginPath()
     ctx.clearRect(0, 0, board.width, board.height)
     player.draw(board, ctx)
-    points = ball.draw(board, player, ctx, points)
+    points = ball.draw(board, player, ctx, counter, points)
     return points
 }
 
@@ -91,6 +92,7 @@ function main() {
     const board = document.getElementById("board")
     const player = new Paddle()
     const ball = new Ball()
+    const counter = document.getElementById("counter")
     let points = 0
 
     document.addEventListener("keydown", (e) => {
@@ -106,7 +108,7 @@ function main() {
     })
 
     setInterval(function () {
-        points = draw(player, ball, board, points)
+        points = draw(player, ball, board, counter, points)
     }, 1000/60)
 }
 

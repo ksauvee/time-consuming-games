@@ -27,6 +27,12 @@ h1 {
 }
 
 
+p {
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+
 #board {
     height: 500px;
     width: 100vw;
@@ -79,7 +85,7 @@ a:visited {
     display: none;
     position: fixed;
     left: 50%;
-    top: 40%;
+    top: 50%;
     transform: translate(-50%, -50%);
     cursor: pointer;
     font-size: 24px;
