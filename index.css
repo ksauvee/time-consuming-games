@@ -1,105 +1,210 @@
-*
-{
+* {
     margin: 0;
     padding: 0;
-    font-family: Avenir, sans-serif;
+    font-family: Verdana, sans-serif;
 }
 
 
-body
-{
-    background-color: #F5F5F5;
+body {
+    padding-bottom: 100px;
+    background-color: #f6f4f2;
 }
 
 
-nav ul {
-    list-style-type: none;
-    display: flex;
+header {
+    color: #006e81;
+    padding-top: 2%;
 }
 
 
-nav ul li {
-    flex: 1 1 auto;
+#presentation {
+    font-size: 1em;
+    padding-top: 0.8%;
+    padding-bottom: 2%;
     text-align: center;
-    position: relative;
-}
-
-
-footer
-{
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-}
-
-
-#presentation
-{
-    font-size: 20px;
-    padding-top: 50px;
-    padding-bottom: 40px;
-    text-align: center;
-    width: 400px;
+    max-width: 400px;
     margin: 0 auto;
 }
 
 
-#buttons
-{
-    display: flex;
-    flex-direction: row;
+h1 {
+    font-size: 2.2em;
+    text-align: center;
 }
 
 
-.game
-{
+#games {
+    padding: 5px;
+    height: 600px;
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    min-width: 465px;
+    flex-wrap: nowrap;
+    overflow: auto;
 }
 
 
-.game-button
-{
-    border-radius: 50%;
-    width: 200px;
-    background: linear-gradient(to bottom right,  rgba(59,255,206,1) , rgba(137,125,242,1));
-    border: none;
-    padding: 60px;
-    margin: 20px;
+.game {
+    background-color: #425664;
     color: white;
-    font-size: 24px;
-    opacity: 1;
+    flex: 0 0 auto;
+    width: 400px;
+    height: 500px;
+    margin: 20px;
     transition: 0.6s;
 }
 
 
-.game-button:hover
-{
-    opacity: 0.7;
+.game:hover {
+    transform:scale(1.1, 1.1)
 }
 
 
-.game-presentation
-{
-    opacity: 0;
-    transition: visibility 0s, opacity 0.5s linear;
-    visibility: hidden;
+.game-title {
+    font-size: 40px;
+    margin: 100px 20px 20px;
+}
+
+
+.game-presentation {
     font-size: 20px;
+    margin: 10px 20px 20px;
 }
 
 
-.game-button:hover + .game-presentation
-{
-    visibility: initial;
+.game-button-parent {
+    text-align: center;
+}
+
+
+.game-button {
+    margin: 50px;
+    font-size: 24px;
+    padding: 16px 30px;
+    text-decoration: none;
+    color: #006e81;
+    background-color: #f6f4f2;
+    transition: all 0.6s;
+    cursor: pointer;
+    opacity: 0.8;
+}
+
+
+.game-button span {
+    display: inline-block;
+    position: relative;
+    transition: 0.6s;
+}
+
+
+.game-button:hover span {
+    padding-left: 20px;
+}
+
+
+.game-button span:after {
+    content: '\003E';
+    position: absolute;
+    opacity: 0;
+}
+
+
+.game-button:hover span:after {
+    opacity: 1;
+    left: 0;
+}
+
+
+.game-button:hover {
     opacity: 1;
 }
 
 
-h1
-{
-    margin-top: 100px;
-    font-size: 40px;
+footer {
+    background-color: #f6f4f2;
+    width: 100%;
+    bottom: 0;
+    position: fixed;
+}
+
+
+footer nav {
+    padding: 1.2%;
+    justify-content: space-around;
+    display: flex;
+    flex-flow: row wrap;
+}
+
+
+a {
+    outline: none;
+    text-decoration: none;
+    padding: 2px 1px 0;
+}
+
+
+a:link {
+    color: #006e81;
+}
+
+
+a:visited {
+    color: #006e81;
+}
+
+
+#suggestions-presentation {
     text-align: center;
+    width: 650px;
+    margin: 0 auto;
+    background-color: white;
+    box-shadow: 0 10px 20px rgba(128,128,128,.3);
+}
+
+
+#suggestions-presentation h1 {
+    padding: 20px;
+    font-size: 30px;
+    color: #006e81;
+}
+
+
+#game-suggestion-button {
+    margin: 20px;
+    font-size: 24px;
+    padding: 16px 30px;
+    text-decoration: none;
+    background-color: #006e81;
+    color: white;
+    transition: all 0.6s;
+    cursor: pointer;
+    opacity: 0.8;
+}
+
+
+#game-suggestion-button span {
+    display: inline-block;
+    position: relative;
+    transition: 0.6s;
+}
+
+
+#game-suggestion-button:hover span {
+    padding-left: 20px;
+}
+
+
+#game-suggestion-button span:after {
+    content: '\003E';
+    position: absolute;
+    opacity: 0;
+}
+
+
+#game-suggestion-button:hover span:after {
+    opacity: 1;
+    left: 0;
+}
+
+
+#game-suggestion-button:hover {
+    opacity: 1;
 }

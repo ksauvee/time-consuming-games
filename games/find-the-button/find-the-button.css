@@ -1,0 +1,115 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: Verdana, sans-serif;
+    background-color: #f6f4f2;
+}
+
+/* Style de la zone textuelle du haut */
+
+header{
+    background-color: #f6f4f2;
+    color: #006e81;
+    padding: 50px;
+}
+
+header div{
+    max-width: 800px;
+    background-color: white;
+    box-shadow: 0 10px 20px rgba(128,128,128,.3);
+    padding: 5px;
+    margin: 0 auto 10px;
+}
+
+header div h1, header div p{
+    color: #006e81;
+    background-color: white;
+}
+
+h1 {
+    font-size: 40px;
+    text-align: center;
+    color: #006e81;
+}
+
+p {
+    margin-top: 20px;
+    padding-top: 0.8%;
+    text-align: center;
+}
+
+
+/* Style résultats */
+
+#resultats{
+    font-size: 5em;
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    padding: 2vh 2vw 2vh 2vw;
+    transform: translate(-50%, -50%);
+}
+
+
+#retry {
+    display: none;
+    position: fixed;
+    left: 50%;
+    top: 80%;
+    transform: translate(-50%, -50%);
+    cursor: pointer;
+    font-size: 24px;
+    padding: 16px 30px;
+    text-decoration: none;
+}
+
+/* Style du bouton */
+
+main{
+    position: relative;
+    height:82vh;
+}
+
+#CLICK {
+    background-color: #89b6f0;
+    font-size: 0.6em;
+    padding: 4px;
+    border: 2px solid #33445a;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+}
+
+#CLICK:hover{
+    border: 2px solid #89b6f0;
+    background-color: #6585af;
+}
+
+
+footer{
+    background-color: #f6f4f2;
+    width: 100%;
+    bottom: 0;
+    position: fixed;
+}
+
+footer nav{
+    padding: 1.2%;
+    justify-content: space-around;
+    display: flex;
+    flex-flow: row wrap;
+}
+
+a{
+    outline: none;
+    text-decoration: none;
+    padding: 2px 1px 0;
+}
+
+a:link {
+    color: #006e81;
+}
+
+a:visited {
+    color: #006e81;
+}

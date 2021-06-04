@@ -9,31 +9,57 @@
 </head>
 <body>
     <header>
-        <nav>
-            <h1>Welcome to the time-consuming games website !</h1>
-            <p id="presentation">A website created by Oscar Vilmot and Kylian Sauvee in which you can play time-consuming games to pass the time and have fun.</p>
-            <div id="buttons">
-                <div class="game">
-                    <button class="game-button" onclick="window.location.href='games/speed-typing/speed-typing.html';">Speed Typing</button>
-                    <p class="game-presentation">Type the text shown as quickly as possible !</p>
-                </div>
-                <div class="game">
-                    <button class="game-button" onclick="window.location.href='games/';">Game 2</button>
-                    <p class="game-presentation">Coming Soon !</p>
-                </div>
-                <div class="game">
-                    <button class="game-button" onclick="window.location.href='games/';">Game 3</button>
-                    <p class="game-presentation">Coming Soon !</p>
-                </div>
-            </div>
-        </nav>
+        <h1>Welcome to the time-consuming games website !</h1>
+        <p id="presentation">A website created by Oscar Vilmot and Kylian Sauvee in which you can play time-consuming games to pass the time and have fun.</p>
     </header>
+
+    <nav id="games">
+        <div class="game">
+            <p class="game-title">Speed Typing</p>
+            <p class="game-presentation">Type the text shown as quickly as possible !</p>
+            <div class="game-button-parent">
+                <button class="game-button" onclick="window.location.href='games/speed-typing/speed-typing.html';"><span>Play</span></button>
+            </div>
+        </div>
+        <div class="game">
+            <p class="game-title">Find The Button</p>
+            <p class="game-presentation">Click the button the most times in 15 seconds !</p>
+            <div class="game-button-parent">
+                <button class="game-button" onclick="window.location.href='games/find-the-button/find-the-button.html';"><span>Play</span></button>
+            </div>
+        </div>
+        <div class="game">
+            <p class="game-title">Single Pong</p>
+            <p class="game-presentation">Your paddle and the ball in a bloody fight !</p>
+            <div class="game-button-parent">
+                <button class="game-button" onclick="window.location.href='games/single-pong/single-pong.html';"><span>Play</span></button>
+            </div>
+        </div>
+        <div class="game">
+            <p class="game-title">Find The Button</p>
+            <p class="game-presentation">Click the button the most times in 15 seconds !</p>
+            <div class="game-button-parent">
+                <button class="game-button" onclick="window.location.href='games/find-the-button/find-the-button.html';"><span>Play</span></button>
+            </div>
+        </div>
+        <div class="game">
+            <p class="game-title">Find The Country</p>
+            <p class="game-presentation">Find the most countries !</p>
+            <div class="game-button-parent">
+                <button class="game-button" onclick="window.location.href='games/find-the-country/find-the-country.html';"><span>Play</span></button>
+            </div>
+        </div>
+    </nav>
+    <div id="suggestions-presentation">
+        <h1>Want to make a game suggestion ?</h1>
+        <button id="game-suggestion-button" onclick="window.location.href='form.html';"><span>Go</span></button>
+    </div>
+
     <footer>
         <nav>
-            <ul>
-                <li><a href="#">Go Up</a></li>
-                <li><a href="about.html">About Us</a></li>
-            </ul>
+            <a href="#">Go Up</a>
+            <a href="index.html">Go Menu</a>
+            <a href="about.html">About Us</a>
         </nav>
     </footer>
 </body>

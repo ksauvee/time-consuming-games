@@ -1,0 +1,126 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Verdana, sans-serif;
+}
+
+
+body {
+    background-color: #f6f4f2;
+    text-align: center;
+}
+
+
+header, main {
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+
+h1, td, th, a:link, a:visited {
+    color: #006e81;
+}
+
+
+h1 {
+    margin-top: 100px;
+    font-size: 40px;
+}
+
+
+form {
+    min-width: 250px;
+    padding: 10px;
+    background-color: #D3D3D3;
+    box-shadow: 2px 2px 3px rgb(100, 100, 100);
+    margin-top: 20px;
+    margin-bottom: 30px;
+}
+
+
+#input-parent {
+    display: flex;
+    flex-flow: row wrap;
+}
+
+
+#input-parent > * {
+    flex: 1;
+    flex-wrap: wrap;
+}
+
+
+input {
+    border: none;
+    border-bottom: 1px solid rgb(158, 158, 158);
+    padding: 3px;
+    margin: 10px;
+}
+
+
+input:invalid, input:placeholder-shown
+{
+    caret-color: red;
+    border-bottom: 1px solid red;
+}
+
+
+button
+{
+    width: 50px;
+    background-color: rgb(247, 247, 247);
+    box-shadow: 1px 1px 2px rgb(100, 100, 100);
+    border: none;
+    border-radius: 5%;
+    padding: 5px;
+    text-transform: uppercase;
+}
+
+
+button:hover {
+    background-color: rgb(158, 158, 158);
+}
+
+
+td {
+    padding: 7px;
+}
+
+
+tr {
+    border-top: solid black 1px;
+}
+
+
+main {
+    display: flex;
+    flex-flow: column nowrap;
+    min-width: 500px;
+    padding: 10px;
+    background-color: white;
+    box-shadow: 2px 2px 3px rgb(100, 100, 100);
+    margin-bottom: 30px;
+}
+
+
+footer {
+    background-color: #f6f4f2;
+    width: 100%;
+    bottom: 0;
+    position: fixed;
+}
+
+
+footer nav {
+    padding: 1.2%;
+    justify-content: space-around;
+    display: flex;
+    flex-flow: row wrap;
+}
+
+
+a {
+    outline: none;
+    text-decoration: none;
+    padding: 2px 1px 0;
+}

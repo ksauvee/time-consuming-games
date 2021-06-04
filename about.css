@@ -1,0 +1,104 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Verdana, sans-serif;
+}
+
+
+body {
+    padding-bottom: 100px;
+    color: #006e81;
+    background-color: #f6f4f2;
+}
+
+h1 {
+    margin-top: 20px;
+    font-size: 2.2em;
+    text-align: center;
+}
+
+
+img {
+    max-height: 250px;
+    max-width: 250px;
+}
+
+
+main {
+    margin-top: 50px;
+}
+
+
+#member-1-picture, #member-2-picture, .member-presentation {
+    display: inline-block;
+}
+
+
+#member-1-picture {
+    float: left;
+}
+
+
+#member-2-picture {
+    float: right;
+}
+
+
+.member-presentation {
+    margin-top: 40px;
+    margin-left: 100px;
+    max-width: 600px;
+}
+
+
+#member-1, #member-2 {
+    max-width: 1000px;
+    min-height: 250px;
+    background-color: white;
+    box-shadow: 0 10px 20px 0 rgba(0,0,0,.05);
+    padding: 10px;
+}
+
+
+#member-1 {
+    margin: 0 auto;
+}
+
+
+#member-2 {
+    position: relative;
+    margin: 100px auto 0;
+}
+
+
+footer {
+    background-color: #f6f4f2;
+    width: 100%;
+    bottom: 0;
+    position: fixed;
+}
+
+
+footer nav {
+    padding: 1.2%;
+    justify-content: space-around;
+    display: flex;
+    flex-flow: row wrap;
+}
+
+
+a {
+    outline: none;
+    text-decoration: none;
+    padding: 2px 1px 0;
+}
+
+
+a:link {
+    color: #006e81;
+}
+
+
+a:visited {
+    color: #006e81;
+}
