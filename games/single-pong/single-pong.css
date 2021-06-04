@@ -7,14 +7,13 @@
 
 body {
     background-color: #f6f4f2;
+    text-align: center;
+    color: #006e81;
+    padding-top: 50px;
 }
 
 
-header{
-    padding: 50px;
-}
-
-header div{
+header {
     max-width: 500px;
     margin: 0 auto 5px;
     background-color: white;
@@ -22,21 +21,9 @@ header div{
     padding: 5px;
 }
 
-header h1, header p{
-    color: #006e81;
-}
 
-
-h1
-{
+h1 {
     font-size: 40px;
-    text-align: center;
-    color: #006e81;
-}
-
-
-p {
-    text-align: center;
 }
 
 
