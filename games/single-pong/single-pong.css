@@ -7,36 +7,29 @@
 
 body {
     background-color: #f6f4f2;
+    text-align: center;
+    color: #006e81;
+    padding-top: 50px;
 }
 
 
-header{
-    padding: 50px;
-}
-
-header div{
+header {
     max-width: 500px;
     margin: 0 auto 5px;
     background-color: white;
-    box-shadow: 0 10px 20px 0 rgba(0,0,0,.05);
+    box-shadow: 0 10px 20px rgba(128,128,128,.3);
     padding: 5px;
 }
 
-header h1, header p{
-    color: #006e81;
-}
 
-
-h1
-{
+h1 {
     font-size: 40px;
-    text-align: center;
-    color: #006e81;
 }
 
 
 p {
-    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 10px;
 }
 
 
@@ -92,7 +85,7 @@ a:visited {
     display: none;
     position: fixed;
     left: 50%;
-    top: 40%;
+    top: 50%;
     transform: translate(-50%, -50%);
     cursor: pointer;
     font-size: 24px;

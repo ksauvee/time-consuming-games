@@ -2,6 +2,7 @@ const minuteur = document.getElementById('minuteur')
 const compteur = document.getElementById('compteur')
 const button = document.getElementById('CLICK')
 const resultats = document.getElementById('resultats')
+const retry = document.getElementById("retry")
 const end = Date.now() + 15000
 let points = 0
 button.onclick = function(){ if(Date.now()<end){ addpoint() } }
@@ -30,7 +31,7 @@ function addpoint(){
 }
 
 function changePosition(){
-    button.style.top = get_random_int(90)+'%';
+    button.style.top = get_random_int(60)+'%';
     button.style.left = get_random_int(95)+'%';
 }
 
@@ -39,4 +40,10 @@ function messageFin(){
     resultats.style.backgroundColor = "#425664"
     resultats.style.color = "white"
     document.getElementsByTagName("header")[0].style.opacity = "0.2"
+
+    retry.innerHTML = "Retry"
+    retry.style.display = "block"
+    retry.style.backgroundColor = "#425664"
+    retry.style.color = "white"
+    retry.onclick = function() {window.location.reload()}
 }
